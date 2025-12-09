@@ -1,5 +1,8 @@
 # Spring MVC security project 
-- this project concerns with spring security USING Default Security Schema where we able to :
+## for MVC :
+- create Dispatcher Servlet class & another class for it's configurations
+## for Security :
+- This project concerns with spring security USING Default Security Schema where we able to :
 - create two tables according to default schema , users & authorities tables 
 - create SecurityConfig class which responsible for creation SecurityFilterChain bean
    - This class MUST be annotated by @Configuration & @EnableWebSecurity
