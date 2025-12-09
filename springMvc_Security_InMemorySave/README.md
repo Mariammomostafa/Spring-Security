@@ -18,6 +18,9 @@
 
 ### Prerequisites
 - Java 21
-- spring Webmvc 6.2.12
-- Servlet-Api
+- spring Webmvc 6.2.7
+- Servlet-Api 6.0.0
+- spring-security-config 6.2.7
+- spring-security-web  6.2.7
+- jstl 3.0.0
 - IDE (Eclips)
