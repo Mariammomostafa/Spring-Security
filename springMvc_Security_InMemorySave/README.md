@@ -10,10 +10,10 @@
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
     -	Create custom login page
-       -	create loginProcessingUrl which will be handled by spring without need to create handler method in controller to handle this           url 
+          -	create loginProcessingUrl which will be handled by spring without need to create handler method in controller to handle               this url 
     -	Create custom logout :
-        - custom logout url (/customlogout) which is POST request & that is default way that will be handled by spring
-        - disable the session & delete SessionId
+           - custom logout url (/customlogout) which is POST request & that is default way that will be handled by spring
+           - disable the session & delete SessionId
 
 
 ### Prerequisites
