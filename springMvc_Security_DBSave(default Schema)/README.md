@@ -1,4 +1,4 @@
-# Spring MVC security project 
+# Spring MVC security project [Default Security Schema without Dao Layer]
 ## for MVC :
 - create Dispatcher Servlet class & another class for it's configurations
 - create bean of InternalResourceViewResolver for detect the path of jsp pages 
