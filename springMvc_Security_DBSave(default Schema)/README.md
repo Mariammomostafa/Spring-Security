@@ -1,6 +1,7 @@
 # Spring MVC security project 
 ## for MVC :
 - create Dispatcher Servlet class & another class for it's configurations
+- create bean of InternalResourceViewResolver for detect the path of jsp pages 
 ## for Security :
 - This project concerns with spring security USING Default Security Schema where we able to :
 - create two tables according to default schema , users & authorities tables 
