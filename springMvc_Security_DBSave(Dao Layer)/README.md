@@ -12,7 +12,7 @@
 - create signupDto to transfer the data from jsp pages (frontend) to controllers 
 - Using jdbcUserDetailsManager to retrieve/load users & authenticate them during login process
 - create DataSource bean for connection object which contains all DB info (url , username , password )
-- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password         firest , then compare it with one saved in DB whhich is already encoded
+- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password firest , then compare it with one saved in      DB whhich is already encoded
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
     - permit the path of jsp pages to be accessed without authentication
