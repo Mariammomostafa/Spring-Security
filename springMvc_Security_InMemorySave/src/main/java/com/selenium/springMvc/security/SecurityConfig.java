@@ -37,8 +37,7 @@ public class SecurityConfig {
 		
 		http.
 		     authorizeHttpRequests(auth -> {
-		    	 auth.requestMatchers(("/hi")).permitAll()
-		    	 .requestMatchers(("/WEB-INF/view/**")).permitAll()
+		    	 auth.requestMatchers("/hi" , "/WEB-INF/view/**").permitAll()
 		    	 .anyRequest().authenticated();
 		     });
 		http.formLogin(form -> {
