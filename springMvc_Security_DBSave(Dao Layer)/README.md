@@ -22,12 +22,12 @@
            - custom logout url (/customlogout) which is POST request & that is default way that will be handled by spring
            - disable the session & delete SessionId
 
-- in JSP pages :
-- After Successfull login , show links based on user's roles
-- if user has ONLY role : USER , so ONLY UserDashBoard link will be viewed to him
-- if user has ONLY role : ADMIN , so ONLY AdminDashBoard link will be viewed to him
-- if user has both roles USER & ADMIN , so both UserDashBoard & AdminDashBoard links will be viewed to him
-- use Security-taglib dependency for this 
+### in JSP pages :
+   - After Successfull login , show links based on user's roles
+   - if user has ONLY role : USER , so ONLY UserDashBoard link will be viewed to him
+   - if user has ONLY role : ADMIN , so ONLY AdminDashBoard link will be viewed to him
+   - if user has both roles USER & ADMIN , so both UserDashBoard & AdminDashBoard links will be viewed to him
+   - use Security-taglib dependency for this 
 ### Prerequisites
 - Java 21
 - spring Webmvc 6.2.7
