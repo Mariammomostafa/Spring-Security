@@ -7,6 +7,7 @@
 - save some users in memeory (registeration) 
 - when user login , retrieve user's info from memory to authenticate it (if user exists or not)
 - Using InMemoryUserDetailsManager to save users & retrieve them
+- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password         firest , then compare it with one saved in DB whhich is already encoded
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
     - permit the path of jsp pages to be accessed without authentication
