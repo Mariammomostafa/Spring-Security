@@ -1,17 +1,31 @@
-# Spring Mvc maven Java-based configuration project 
-- using java class instead of both xml files
-- Dispatcher Servlet class instead of web.xml
-<p align="center">
-<img width="600" height="400" alt="1" src="https://github.com/user-attachments/assets/7b6c41a6-3f4e-4a03-ba58-a8eb3ac6c52d" />
-</p>
+# Spring MVC security project 
+- this project concerns with spring security USING Default Security Schema where we able to :
+- create two tables according to default schema , users & authorities tables 
+- create SecurityConfig class which responsible for creation SecurityFilterChain bean
+   - This class MUST be annotated by @Configuration & @EnableWebSecurity
+- create SecurityInitializer class which responsible to looking for SecurityFilterChain bean & start security stuff
+- create some users manulaly using User class where add username , password , roles & return object of UserDetails
+- save  users in Data Base (registeration) 
+- when user login , retrieve user's info from Data Base to authenticate him (if user exists or not)
+- Using jdbcUserDetailsManager to save users & retrieve them
+- create DataSource bean for connection object which contains all DB info (url , username , password )
+- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password         firest , then compare it with one saved in DB whhich is already encoded
+- Override SecurityFilterChain to :
+    - NOT make all requests authenticated & permit for some to accept them without authentication (login)
+    - permit the path of jsp pages to be accessed without authentication
+    -	Create custom login page
+          -	create loginProcessingUrl which will be handled by spring without need to create handler method in controller to handle               this url 
+    -	Create custom logout :
+           - custom logout url (/customlogout) which is POST request & that is default way that will be handled by spring
+           - disable the session & delete SessionId
 
-- Config class instead of another xml configuration file
-<p align="center">
-<img width="600" height="400" alt="1" src="https://github.com/user-attachments/assets/f5a6acb0-3098-4fc8-896a-87b3898646ae" />
-</p>
 
 ### Prerequisites
 - Java 21
-- spring Webmvc 6.2.12
-- Servlet-Api
+- spring Webmvc 6.2.7
+- Servlet-Api 6.0.0
+- spring-security-config 6.2.7
+- spring-security-web  6.2.7
+- mysql-connector-j  9.1.0
+- jstl 3.0.0
 - IDE (Eclips)
