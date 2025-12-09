@@ -9,6 +9,7 @@
 - Using InMemoryUserDetailsManager to save users & retrieve them
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
+    - permit the path of jsp pages to be accessed without authentication
     -	Create custom login page
           -	create loginProcessingUrl which will be handled by spring without need to create handler method in controller to handle               this url 
     -	Create custom logout :
