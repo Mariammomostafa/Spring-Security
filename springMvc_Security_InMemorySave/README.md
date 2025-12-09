@@ -1,14 +1,17 @@
-# Spring Mvc maven Java-based configuration project 
-- using java class instead of both xml files
-- Dispatcher Servlet class instead of web.xml
-<p align="center">
-<img width="600" height="400" alt="1" src="https://github.com/user-attachments/assets/7b6c41a6-3f4e-4a03-ba58-a8eb3ac6c52d" />
-</p>
+# Spring Mvc security project 
+- this project concerns with spring security where we able to :
+- create SecurityConfig class which responsible for creation SecurityFilterChain bean
+   - This class MUST be annotated by @Configuration & @EnableWebSecurity
+- create SecurityInitializer class which responsible to looking for SecurityFilterChain bean & start security stuff
+- create some users manulaly using User class where add username , password , roles & return object of UserDetails
+- save some users in memeory (registeration) 
+- when user login , retrieve user's info from memory to authenticate it (if user exists or not)
+- Using InMemoryUserDetailsManager to save users & retrieve them
+- Override SecurityFilterChain to :
+    o	NOT make all requests authenticated & permit for some to accept them without authentication (login)
+    o	Create custom login page 
+    o	Create custom logout page 
 
-- Config class instead of another xml configuration file
-<p align="center">
-<img width="600" height="400" alt="1" src="https://github.com/user-attachments/assets/f5a6acb0-3098-4fc8-896a-87b3898646ae" />
-</p>
 
 ### Prerequisites
 - Java 21
