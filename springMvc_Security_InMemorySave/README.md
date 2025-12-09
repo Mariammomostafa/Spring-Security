@@ -8,9 +8,12 @@
 - when user login , retrieve user's info from memory to authenticate it (if user exists or not)
 - Using InMemoryUserDetailsManager to save users & retrieve them
 - Override SecurityFilterChain to :
-    o	NOT make all requests authenticated & permit for some to accept them without authentication (login)
-    o	Create custom login page 
-    o	Create custom logout page 
+    - NOT make all requests authenticated & permit for some to accept them without authentication (login)
+    -	Create custom login page
+       -	create loginProcessingUrl which will be handled by spring without need to create handler method in controller to handle this           url 
+    -	Create custom logout :
+        - custom logout url (/customlogout) which is POST request & that is default way that will be handled by spring
+        - disable the session & delete SessionId
 
 
 ### Prerequisites
