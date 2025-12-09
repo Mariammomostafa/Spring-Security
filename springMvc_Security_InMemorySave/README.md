@@ -1,4 +1,8 @@
 # Spring Mvc security project 
+## for MVC :
+- create Dispatcher Servlet class & another class for it's configurations
+- create bean of InternalResourceViewResolver for detect the path of jsp pages 
+## for Security :
 - this project concerns with spring security where we able to :
 - create SecurityConfig class which responsible for creation SecurityFilterChain bean
    - This class MUST be annotated by @Configuration & @EnableWebSecurity
