@@ -3,15 +3,17 @@
 - create Dispatcher Servlet class & another class for it's configurations
 - create bean of InternalResourceViewResolver for detect the path of jsp pages 
 ## for Security :
-- This project concerns with spring security USING Default Security Schema where we able to :
-- create two tables according to default schema , users & authorities tables 
+- This project concerns with spring security Without using Default Security Schema where we able to :
+- create our own table called customer 
 - create SecurityConfig class which responsible for creation SecurityFilterChain bean
    - This class MUST be annotated by @Configuration & @EnableWebSecurity
 - create SecurityInitializer class which responsible to looking for SecurityFilterChain bean & start security stuff
-- create Dao layer to save users & for all Crud operations using JdbcTempalte
 - create signupDto to transfer the data from jsp pages (frontend) to controllers 
-- Using jdbcUserDetailsManager to retrieve/load users to authenticate them during login process
+- create Dao layer to save users tocustomer table & for all CRUD operations using JdbcTempalte
+- create MyUserDetailsService class which implement UserDetailsService to override loadUserByUsername() which used in login process
+- create AuthenticationProvider & pass custom UserDetailsService & passwordEncoder to it to use  them while load users from    DB 
 - create DataSource bean for connection object which contains all DB info (url , username , password )
+- create JdbcTemplate to apply CRUD operations 
 - create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password firest , then compare it with one saved in      DB whhich is already encoded
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
