@@ -1,4 +1,4 @@
-# Spring MVC security project [Default Security Schema without Dao Layer]
+# Spring MVC security project [Default Security Schema]
 ## for MVC :
 - create Dispatcher Servlet class & another class for it's configurations
 - create bean of InternalResourceViewResolver for detect the path of jsp pages 
@@ -9,11 +9,10 @@
    - This class MUST be annotated by @Configuration & @EnableWebSecurity
 - create SecurityInitializer class which responsible to looking for SecurityFilterChain bean & start security stuff
 - create some users manulaly using User class where add username , password , roles & return object of UserDetails
-- save  users in Data Base (registeration) 
 - when user login , retrieve user's info from Data Base to authenticate him (if user exists or not)
 - Using jdbcUserDetailsManager to save users & retrieve them
 - create DataSource bean for connection object which contains all DB info (url , username , password )
-- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password         firest , then compare it with one saved in DB whhich is already encoded
+- create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password firest , then compare it with one saved in DB whhich is already encoded
 - Override SecurityFilterChain to :
     - NOT make all requests authenticated & permit for some to accept them without authentication (login)
     - permit the path of jsp pages to be accessed without authentication
