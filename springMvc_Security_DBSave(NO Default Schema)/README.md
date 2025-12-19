@@ -11,7 +11,7 @@
 - create signupDto to transfer the data from jsp pages (frontend) to controllers 
 - create Dao layer to save users tocustomer table & for all CRUD operations using JdbcTempalte
 - create MyUserDetailsService class which implement UserDetailsService to override loadUserByUsername() which used in login process
-- create AuthenticationProvider & pass custom UserDetailsService & passwordEncoder to it to use  them while load users from    DB 
+- create AuthenticationProvider which will use custom UserDetailsService & passwordEncoder while load users from    DB 
 - create DataSource bean for connection object which contains all DB info (url , username , password )
 - create JdbcTemplate to apply CRUD operations 
 - create bean of PasswordEncoder to encode password before saving it & will be used in login process where encode the entered password firest , then compare it with one saved in      DB whhich is already encoded
